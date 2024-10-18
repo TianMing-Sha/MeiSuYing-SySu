@@ -1,0 +1,51 @@
+[BASE_INFO]
+# The app name will be applied to all processes including agent service integration.
+appname = 'AI-FineDuck'
+
+[CORE_PACKAGE]
+# Perform a full component scan and registration for all the paths under this list.
+default = ['sample_standard_app.app.core']
+# agent
+agent = ['sample_standard_app.app.core.agent']
+# knowledge 
+knowledge = ['sample_standard_app.app.core.knowledge']
+# llm 
+llm = ['sample_standard_app.app.core.llm']
+# planner 
+planner = ['sample_standard_app.app.core.planner']
+# tool 
+tool = ['sample_standard_app.app.core.tool']
+# memory 
+memory = ['sample_standard_app.app.core.memory']
+# service 
+service = ['sample_standard_app.app.core.service']
+# prompt 
+prompt = ['sample_standard_app.app.core.prompt']
+# sqldb_wrapper
+sqldb_wrapper = ['sample_standard_app.app.core.sqldb_wrapper']
+
+[SUB_CONFIG_PATH]
+# Log 
+log_config_path = './log_config.toml'
+# Key. REMEMBER TO ADD IT TO .gitignore.
+custom_key_path = './custom_key.toml'
+
+[DB]
+# A sqlalchemy db uri used for storing various info, for example, service request, generated during application running.
+# If it's empty, agentUniverse will create a local sqlite db as default choice.
+system_db_uri = ''
+
+[GUNICORN]
+# Use gunicorn as http server when activate is 'true', or only use flask.
+activate = 'false'
+# Gunicorn config file path, an absolute path or a relative path based on the dir where the current config file is located.
+gunicorn_config_path = './gunicorn_config.toml'
+
+[GRPC]
+activate = 'false'
+max_workers = 10
+server_port = 50051
+
+[MONITOR]
+activate = false
+dir = './monitor'
