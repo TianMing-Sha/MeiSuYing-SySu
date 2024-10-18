@@ -7,7 +7,7 @@ duckduckgo-search==6.2.5
 edge-tts==6.1.11
 exceptiongroup==1.2.0
 flask-cors==4.0.0
-gradio==3.32.9
+https://public.agent-matrix.com/publish/gradio-3.32.9-py3-none-any.whl
 gunicorn==22.0.0
 httptools==0.6.1
 ipykernel==6.29.3
